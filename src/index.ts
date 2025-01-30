@@ -1,10 +1,6 @@
-import { fastify } from "fastify";
+import { createServer } from "./server.ts";
 
-const app = fastify();
-
-app.get("/products", (request, reply) => {
-  reply.send({Hello: 'World'})
-});
+const app = createServer();
 
 app.listen({ port: 3333 }).then(() => {
     console.log("HTTP server running on port 3333");
@@ -12,4 +8,3 @@ app.listen({ port: 3333 }).then(() => {
     console.error(error);
     process.exit(1);
   });
-

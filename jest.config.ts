@@ -1,16 +1,13 @@
-import type { Config } from "jest";
-
-const config: Config = {
+module.exports = {
   clearMocks: true,
   collectCoverage: true,
   coverageDirectory: "coverage",
   coverageProvider: "v8",
   coverageReporters: ["json"],
-  setupFilesAfterEnv: ["./jest.setup.ts"],
+  setupFilesAfterEnv: ["./jest.config.ts"],
   testMatch: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[tj]s?(x)"],
   transform: {
-    "^.\\.(ts|tsx)$": "ts-jest",
+    "^.+\\.(ts|tsx)$": "ts-jest",
   },
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
 };
-
-export default config;

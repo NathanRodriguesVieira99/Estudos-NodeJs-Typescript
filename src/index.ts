@@ -1,3 +1,3 @@
-import { startServer } from "routes/server.ts";
+import { startServer } from "./server.ts";
 
 startServer()
